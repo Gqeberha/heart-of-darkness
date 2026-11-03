@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
     <title>Сердце тьмы — Главная</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
@@ -74,8 +75,7 @@
             <h2>Дополнительная информация</h2>
 
             <p>
-                <a href="https://www.gutenberg.org/ebooks/219"
-                   target="_blank">
+                <a href="https://www.gutenberg.org/ebooks/219" target="_blank">
                     Читать оригинал книги на Project Gutenberg
                 </a>
             </p>
@@ -84,11 +84,49 @@
                 <a href="#about">Вернуться к разделу «О книге»</a>
             </p>
         </section>
+
+
+        <section id="interactive">
+            <h2>Интерактивные возможности</h2>
+
+            <h3>Изменение оформления</h3>
+            <p>Выберите цвет фона страницы:</p>
+
+            <button onclick="changeBackground('#211c18')">
+                Тёмный
+            </button>
+
+            <button onclick="changeBackground('#263238')">
+                Сине-серый
+            </button>
+
+            <button onclick="changeBackground('#30251e')">
+                Коричневый
+            </button>
+
+            <h3>Текущая дата</h3>
+            <p>Нажмите кнопку, чтобы узнать сегодняшнюю дату.</p>
+
+            <button onclick="showDate()">
+                Показать дату
+            </button>
+
+            <h3>Удаление длинных слов</h3>
+            <p>Введите предложение. Программа удалит слова, состоящие более чем из 7 букв.</p>
+
+            <textarea id="userText" rows="4" placeholder="Введите предложение..."></textarea>
+
+            <button onclick="removeLongWords()">
+                Удалить длинные слова
+            </button>
+        </section>
+
     </main>
 
     <footer>
         <p>Сайт посвящён произведению «Сердце тьмы»</p>
     </footer>
-
+<script src="script.js"></script>
 </body>
+
 </html>
